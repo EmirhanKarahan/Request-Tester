@@ -11,7 +11,7 @@ class ResultsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "resultCell")
+        tableView.register(RequestTableViewCell.nib(), forCellReuseIdentifier: RequestTableViewCell.identifier)
     }
 
 
@@ -20,9 +20,14 @@ class ResultsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell", for: indexPath)
-        cell.textLabel?.text = "deneme"
+        let cell = tableView.dequeueReusableCell(withIdentifier: RequestTableViewCell.identifier, for: indexPath) as! RequestTableViewCell
+        cell.urlLabel.text = "service.asis.com"
+        cell.successLabel.text = "Success"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
 

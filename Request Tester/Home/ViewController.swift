@@ -12,7 +12,6 @@ protocol MethodDelegate{
     func setMethodName(name:String)
 }
 
-
 protocol URLDelegate{
     var urlString: String { get }
     func setURLString(urlString:String)
@@ -284,7 +283,7 @@ final class ViewController: UIViewController, MethodDelegate, UserInformationDel
     }
     
     @objc private func sendRequestButtonTapped(){
-        navigationController?.pushViewController(ResultsTableViewController(), animated: true)
+        navigationController?.pushViewController(ProgressViewController(), animated: true)
     }
     
 

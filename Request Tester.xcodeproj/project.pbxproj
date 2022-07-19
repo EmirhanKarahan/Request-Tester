@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E3919E628857740008053A1 /* FinalResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3919E528857740008053A1 /* FinalResultsViewController.swift */; };
+		1E3919E928857ABB008053A1 /* RequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3919E728857ABB008053A1 /* RequestTableViewCell.swift */; };
+		1E3919EA28857ABB008053A1 /* RequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3919E828857ABB008053A1 /* RequestTableViewCell.xib */; };
 		1EAC6846288472BB006F77E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC683F288472BB006F77E4 /* ViewController.swift */; };
 		1EAC6847288472BB006F77E4 /* URLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC6840288472BB006F77E4 /* URLTableViewController.swift */; };
 		1EAC6848288472BB006F77E4 /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC6841288472BB006F77E4 /* UserInformationViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E3919E528857740008053A1 /* FinalResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalResultsViewController.swift; sourceTree = "<group>"; };
+		1E3919E728857ABB008053A1 /* RequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTableViewCell.swift; sourceTree = "<group>"; };
+		1E3919E828857ABB008053A1 /* RequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestTableViewCell.xib; sourceTree = "<group>"; };
 		1EAC683F288472BB006F77E4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1EAC6840288472BB006F77E4 /* URLTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLTableViewController.swift; sourceTree = "<group>"; };
 		1EAC6841288472BB006F77E4 /* UserInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInformationViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,36 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		1ED456AE28868D4200B09587 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				1EAC6845288472BB006F77E4 /* ResultsTableViewController.swift */,
+				1E3919E728857ABB008053A1 /* RequestTableViewCell.swift */,
+				1E3919E828857ABB008053A1 /* RequestTableViewCell.xib */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		1ED456AF28868D6900B09587 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EE096162884715F002C1717 /* AppDelegate.swift */,
+				1EE096182884715F002C1717 /* SceneDelegate.swift */,
+				1EE0961C2884715F002C1717 /* Main.storyboard */,
+				1EE0962128847160002C1717 /* LaunchScreen.storyboard */,
+				1EE0961F28847160002C1717 /* Assets.xcassets */,
+				1EE0962428847160002C1717 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1ED456B028868E5B00B09587 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		1EE0960A2884715F002C1717 = {
 			isa = PBXGroup;
 			children = (
@@ -87,15 +123,12 @@
 		1EE096152884715F002C1717 /* Request Tester */ = {
 			isa = PBXGroup;
 			children = (
-				1EE096162884715F002C1717 /* AppDelegate.swift */,
-				1EE096182884715F002C1717 /* SceneDelegate.swift */,
+				1ED456B028868E5B00B09587 /* Service */,
+				1ED456AF28868D6900B09587 /* Supporting Files */,
 				1EAC683E288472BB006F77E4 /* Home */,
+				1ED456AE28868D4200B09587 /* Table View */,
+				1E3919E528857740008053A1 /* FinalResultsViewController.swift */,
 				1EAC6844288472BB006F77E4 /* ProgressViewController.swift */,
-				1EAC6845288472BB006F77E4 /* ResultsTableViewController.swift */,
-				1EE0961C2884715F002C1717 /* Main.storyboard */,
-				1EE0961F28847160002C1717 /* Assets.xcassets */,
-				1EE0962128847160002C1717 /* LaunchScreen.storyboard */,
-				1EE0962428847160002C1717 /* Info.plist */,
 			);
 			path = "Request Tester";
 			sourceTree = "<group>";
@@ -178,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EE0962328847160002C1717 /* LaunchScreen.storyboard in Resources */,
+				1E3919EA28857ABB008053A1 /* RequestTableViewCell.xib in Resources */,
 				1EE0962028847160002C1717 /* Assets.xcassets in Resources */,
 				1EE0961E2884715F002C1717 /* Main.storyboard in Resources */,
 			);
@@ -237,9 +271,11 @@
 				1EAC6849288472BB006F77E4 /* HeaderButtonsView.swift in Sources */,
 				1EAC684C288472BB006F77E4 /* ResultsTableViewController.swift in Sources */,
 				1EAC6846288472BB006F77E4 /* ViewController.swift in Sources */,
+				1E3919E928857ABB008053A1 /* RequestTableViewCell.swift in Sources */,
 				1EE096192884715F002C1717 /* SceneDelegate.swift in Sources */,
 				1EAC684B288472BB006F77E4 /* ProgressViewController.swift in Sources */,
 				1EAC6848288472BB006F77E4 /* UserInformationViewController.swift in Sources */,
+				1E3919E628857740008053A1 /* FinalResultsViewController.swift in Sources */,
 				1EAC6847288472BB006F77E4 /* URLTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -370,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -390,7 +426,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W35MT3Z3FQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Request Tester/Info.plist";
+				INFOPLIST_FILE = "Request Tester/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -420,7 +456,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W35MT3Z3FQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Request Tester/Info.plist";
+				INFOPLIST_FILE = "Request Tester/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

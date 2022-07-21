@@ -11,14 +11,20 @@ class ProgressViewController: UIViewController {
     
     private var startingLabel:UILabel!
     private var requestPendingLabel:UILabel!
-    private var requestCountButton:UIButton!
+    private var requestCountLabel:UILabel!
+    private var seeDetailedButton:UIButton!
     private var progressBar:UIProgressView!
     private var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
-        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in self.navigationController?.pushViewController(FinalResultsViewController(), animated: true)})
+//        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in self.navigationController?.pushViewController(FinalResultsViewController(), animated: true)})
+        startRequests()
+    }
+    
+    private func startRequests(){
+       // Service().fetchDatas()
     }
     
     private func configureViews(){
@@ -34,16 +40,20 @@ class ProgressViewController: UIViewController {
         requestPendingLabel.font = .systemFont(ofSize: 24)
         requestPendingLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        requestCountButton = UIButton()
-        requestCountButton.setTitle("0/1000", for: .normal)
-        requestCountButton.setTitleColor(.black, for: .normal)
-        requestCountButton.titleLabel?.font = .systemFont(ofSize: 24)
-        requestCountButton.addTarget(self, action: #selector(didRequestCountButtonTapped), for: .touchUpInside)
-        requestCountButton.translatesAutoresizingMaskIntoConstraints = false
+        requestCountLabel = UILabel()
+        requestCountLabel.text = "0/1000"
+        requestCountLabel.font = .systemFont(ofSize: 24)
+        requestCountLabel.translatesAutoresizingMaskIntoConstraints = false
         
         progressBar = UIProgressView(progressViewStyle: .default)
         progressBar.setProgress(3, animated: true)
         progressBar.translatesAutoresizingMaskIntoConstraints = false
+        
+        seeDetailedButton = UIButton(type: .system)
+        seeDetailedButton.setTitle("See Detailed", for: .normal)
+        seeDetailedButton.titleLabel?.font = .systemFont(ofSize: 24)
+        seeDetailedButton.addTarget(self, action: #selector(didSeeDetailedButtonTapped), for: .touchUpInside)
+        seeDetailedButton.translatesAutoresizingMaskIntoConstraints = false
         
         addSubviews()
         activateLayout()
@@ -53,15 +63,19 @@ class ProgressViewController: UIViewController {
         navigationController?.pushViewController(ResultsTableViewController(), animated: true)
     }
     
+    @objc private func didSeeDetailedButtonTapped(){
+        navigationController?.pushViewController(ResultsTableViewController(), animated: true)
+    }
+    
     private func addSubviews(){
         view.addSubview(startingLabel)
         view.addSubview(requestPendingLabel)
-        view.addSubview(requestCountButton)
+        view.addSubview(requestCountLabel)
         view.addSubview(progressBar)
+        view.addSubview(seeDetailedButton)
     }
     
     private func activateLayout(){
-        
         NSLayoutConstraint.activate([
             startingLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 200),
             startingLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
@@ -69,16 +83,17 @@ class ProgressViewController: UIViewController {
             requestPendingLabel.topAnchor.constraint(equalTo: startingLabel.bottomAnchor, constant: 20),
             requestPendingLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             
-            requestCountButton.topAnchor.constraint(equalTo: requestPendingLabel.bottomAnchor, constant: 20),
-            requestCountButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            requestCountLabel.topAnchor.constraint(equalTo: requestPendingLabel.bottomAnchor, constant: 20),
+            requestCountLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             
-            progressBar.topAnchor.constraint(equalTo: requestCountButton.bottomAnchor, constant: 20),
+            progressBar.topAnchor.constraint(equalTo: requestCountLabel.bottomAnchor, constant: 20),
             progressBar.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             progressBar.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.5),
-            progressBar.heightAnchor.constraint(equalToConstant: 10)
+            progressBar.heightAnchor.constraint(equalToConstant: 10),
+            
+            seeDetailedButton.topAnchor.constraint(equalTo: progressBar.bottomAnchor, constant: 40),
+            seeDetailedButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         ])
     }
-    
-
   
 }

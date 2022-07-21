@@ -16,7 +16,7 @@ final class FinalResultsViewController: UIViewController {
         configure()
     }
     
-    private func configure(){
+    private func configure() {
         view.backgroundColor = .lightGray
         
         resultLabel = UILabel()
@@ -27,7 +27,6 @@ final class FinalResultsViewController: UIViewController {
             resultLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             resultLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
-        
     }
-
+    
 }

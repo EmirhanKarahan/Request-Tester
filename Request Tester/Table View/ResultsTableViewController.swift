@@ -14,7 +14,6 @@ class ResultsTableViewController: UITableViewController {
         tableView.register(RequestTableViewCell.nib(), forCellReuseIdentifier: RequestTableViewCell.identifier)
     }
 
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -30,6 +29,4 @@ class ResultsTableViewController: UITableViewController {
         return 100
     }
     
-
-
 }

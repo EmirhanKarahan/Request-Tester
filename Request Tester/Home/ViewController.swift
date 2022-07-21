@@ -264,12 +264,11 @@ final class ViewController: UIViewController, MethodDelegate, UserInformationDel
             sendRequestButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             sendRequestButton.widthAnchor.constraint(equalTo: protocolSelection.widthAnchor),
             sendRequestButton.heightAnchor.constraint(equalToConstant: 36),
-            
         ])
     }
     
     @objc private func didProtocolChanged(_ segmentedControl: UISegmentedControl){
-        print(headersSelectionView.selectedHeaders)
+        
     }
     
     @objc private func didMethodSelectionButtonTapped(){
@@ -283,7 +282,9 @@ final class ViewController: UIViewController, MethodDelegate, UserInformationDel
     }
     
     @objc private func sendRequestButtonTapped(){
-        navigationController?.pushViewController(ProgressViewController(), animated: true)
+        print(protocolSelection.selectedSegmentIndex, urlTextField.text!, headersSelectionView.selectedHeaders, methodTextField.text!,
+              requestCountTextField.text!, cityCodeTextField.text!)
+        //navigationController?.pushViewController(ProgressViewController(), animated: true)
     }
     
 

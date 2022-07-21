@@ -17,6 +17,8 @@
 		1EAC684A288472BB006F77E4 /* MethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC6843288472BB006F77E4 /* MethodTableViewController.swift */; };
 		1EAC684B288472BB006F77E4 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC6844288472BB006F77E4 /* ProgressViewController.swift */; };
 		1EAC684C288472BB006F77E4 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAC6845288472BB006F77E4 /* ResultsTableViewController.swift */; };
+		1ECA9EDC2886DD8900833EE0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA9EDB2886DD8900833EE0 /* Service.swift */; };
+		1ECA9EDE2886DE2E00833EE0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECA9EDD2886DE2E00833EE0 /* Models.swift */; };
 		1EE096172884715F002C1717 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE096162884715F002C1717 /* AppDelegate.swift */; };
 		1EE096192884715F002C1717 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE096182884715F002C1717 /* SceneDelegate.swift */; };
 		1EE0961E2884715F002C1717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE0961C2884715F002C1717 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		1EAC6843288472BB006F77E4 /* MethodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodTableViewController.swift; sourceTree = "<group>"; };
 		1EAC6844288472BB006F77E4 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		1EAC6845288472BB006F77E4 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		1ECA9EDB2886DD8900833EE0 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		1ECA9EDD2886DE2E00833EE0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		1EE096132884715F002C1717 /* Request Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Request Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE096162884715F002C1717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EE096182884715F002C1717 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		1ED456B028868E5B00B09587 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1ECA9EDD2886DE2E00833EE0 /* Models.swift */,
+				1ECA9EDB2886DD8900833EE0 /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -267,10 +273,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EE096172884715F002C1717 /* AppDelegate.swift in Sources */,
+				1ECA9EDE2886DE2E00833EE0 /* Models.swift in Sources */,
 				1EAC684A288472BB006F77E4 /* MethodTableViewController.swift in Sources */,
 				1EAC6849288472BB006F77E4 /* HeaderButtonsView.swift in Sources */,
 				1EAC684C288472BB006F77E4 /* ResultsTableViewController.swift in Sources */,
 				1EAC6846288472BB006F77E4 /* ViewController.swift in Sources */,
+				1ECA9EDC2886DD8900833EE0 /* Service.swift in Sources */,
 				1E3919E928857ABB008053A1 /* RequestTableViewCell.swift in Sources */,
 				1EE096192884715F002C1717 /* SceneDelegate.swift in Sources */,
 				1EAC684B288472BB006F77E4 /* ProgressViewController.swift in Sources */,

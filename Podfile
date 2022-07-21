@@ -7,6 +7,7 @@ target 'Request Tester' do
 
   # Pods for Request Tester
   pod 'IQKeyboardManagerSwift'
+  pod 'Alamofire'
 
 end
 
